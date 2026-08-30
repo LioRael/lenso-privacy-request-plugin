@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["organization_id", "kind", "description", "idempotency_key"],
+  "properties": {
+    "organization_id": { "type": "string" },
+    "kind": { "type": "string", "enum": ["access", "export", "erasure", "correction", "restriction"] },
+    "description": { "type": "string" },
+    "idempotency_key": { "type": "string" }
+  },
+  "additionalProperties": false
+}

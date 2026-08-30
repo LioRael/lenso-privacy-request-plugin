@@ -1,0 +1,47 @@
+[package]
+name = "lenso-privacy-request-postgres-plugin"
+version = "0.1.0"
+description = "PostgreSQL-backed Privacy Request workflow Plugin for Lenso applications."
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[package.metadata.lenso]
+plugin-id = "lenso.privacy-request.postgres"
+root-slot = "privacy-request"
+
+[features]
+default = []
+postgres-acceptance = []
+
+[dependencies]
+lenso.workspace = true
+lenso-auth-sdk.workspace = true
+lenso-capability-access-control.workspace = true
+lenso-capability-data-export-source.workspace = true
+lenso-capability-organization-membership.workspace = true
+lenso-capability-privacy-request = { version = "0.1.0", path = "../lenso-capability-privacy-request" }
+lenso-capability-privacy-request-admin = { version = "0.1.0", path = "../lenso-capability-privacy-request-admin" }
+lenso-capability-privacy-request-worker = { version = "0.1.0", path = "../lenso-capability-privacy-request-worker" }
+lenso-capability-retention-participant.workspace = true
+lenso-capability-secrets.workspace = true
+lenso-kernel.workspace = true
+lenso-native-adapter.workspace = true
+lenso-postgres-kit.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+sqlx.workspace = true
+thiserror.workspace = true
+time.workspace = true
+uuid.workspace = true
+zeroize.workspace = true
+
+[dev-dependencies]
+lenso-app-plan.workspace = true
+tokio.workspace = true
+
+[lints]
+workspace = true

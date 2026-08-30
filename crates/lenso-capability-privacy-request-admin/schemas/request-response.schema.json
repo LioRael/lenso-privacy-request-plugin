@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["request_id", "identifier", "organization_id", "requester_subject", "kind", "description", "state", "identity_status", "legal_hold", "assignee_subject", "revision", "deadline_at", "overdue", "created_at", "updated_at", "completed_at", "paused_reason", "failure_reason"],
+  "properties": {
+    "request_id": { "type": "string" }, "identifier": { "type": "string" }, "organization_id": { "type": "string" }, "requester_subject": { "type": "string" },
+    "kind": { "type": "string", "enum": ["access", "export", "erasure", "correction", "restriction"] }, "description": { "type": "string" },
+    "state": { "type": "string", "enum": ["pending_verification", "ready", "claimed", "processing", "awaiting_completion", "paused", "completed", "rejected", "withdrawn", "failed"] },
+    "identity_status": { "type": "string", "enum": ["pending", "verified", "failed"] }, "legal_hold": { "type": "boolean" }, "assignee_subject": { "type": ["string", "null"] },
+    "revision": { "type": "string" }, "deadline_at": { "type": "string" }, "overdue": { "type": "boolean" }, "created_at": { "type": "string" }, "updated_at": { "type": "string" },
+    "completed_at": { "type": ["string", "null"] }, "paused_reason": { "type": ["string", "null"] }, "failure_reason": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["requests", "next_cursor"],
+  "properties": {
+    "requests": { "type": "array", "items": { "$ref": "request-response.schema.json" } },
+    "next_cursor": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

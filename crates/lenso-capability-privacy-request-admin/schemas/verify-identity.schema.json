@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["organization_id", "request_id", "expected_revision", "outcome", "evidence_reference", "idempotency_key"],
+  "properties": {
+    "organization_id": { "type": "string" },
+    "request_id": { "type": "string" },
+    "expected_revision": { "type": "string" },
+    "outcome": { "type": "string", "enum": ["verified", "failed"] },
+    "evidence_reference": { "type": "string" },
+    "idempotency_key": { "type": "string" }
+  },
+  "additionalProperties": false
+}
