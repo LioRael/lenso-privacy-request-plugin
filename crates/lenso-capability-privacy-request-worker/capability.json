@@ -1,0 +1,14 @@
+{
+  "id": "lenso.privacy-request-worker@1",
+  "version": "1.0.0",
+  "portable": true,
+  "cross_lane_transfer": true,
+  "operations": [
+    { "name": "claim_next", "interaction": "request", "request_schema": "schemas/claim-next.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "claim_request", "interaction": "request", "request_schema": "schemas/base-mutation.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "process_request", "interaction": "request", "request_schema": "schemas/process-request.schema.json", "response_schema": "schemas/process-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "complete_request", "interaction": "request", "request_schema": "schemas/complete-request.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "fail_request", "interaction": "request", "request_schema": "schemas/fail-request.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "retry_request", "interaction": "request", "request_schema": "schemas/base-mutation.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" }
+  ]
+}

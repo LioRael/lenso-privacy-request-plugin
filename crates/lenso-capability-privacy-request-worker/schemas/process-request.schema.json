@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["organization_id", "request_id", "expected_revision", "limit", "idempotency_key"],
+  "properties": {
+    "organization_id": { "type": "string" }, "request_id": { "type": "string" }, "expected_revision": { "type": "string" },
+    "cursor": { "type": "string" }, "limit": { "type": "integer", "minimum": 1, "maximum": 100 },
+    "manual_evidence_reference": { "type": "string" }, "idempotency_key": { "type": "string" }
+  },
+  "additionalProperties": false
+}

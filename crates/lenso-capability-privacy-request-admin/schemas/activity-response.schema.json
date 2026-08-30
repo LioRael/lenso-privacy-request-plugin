@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["activities", "next_cursor"],
+  "properties": {
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["activity_id", "kind", "actor_subject", "request_revision", "evidence_json", "created_at"],
+        "properties": {
+          "activity_id": { "type": "string" },
+          "kind": { "type": "string" },
+          "actor_subject": { "type": "string" },
+          "request_revision": { "type": "string" },
+          "evidence_json": { "type": "string" },
+          "created_at": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "next_cursor": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

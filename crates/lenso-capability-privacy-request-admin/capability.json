@@ -1,0 +1,15 @@
+{
+  "id": "lenso.privacy-request-admin@1",
+  "version": "1.0.0",
+  "portable": true,
+  "cross_lane_transfer": true,
+  "operations": [
+    { "name": "list_admin_requests", "interaction": "request", "request_schema": "schemas/list-requests.schema.json", "response_schema": "schemas/list-requests-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "verify_identity", "interaction": "request", "request_schema": "schemas/verify-identity.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "set_legal_hold", "interaction": "request", "request_schema": "schemas/set-legal-hold.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "pause_request", "interaction": "request", "request_schema": "schemas/reason-mutation.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "resume_request", "interaction": "request", "request_schema": "schemas/base-mutation.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "reject_request", "interaction": "request", "request_schema": "schemas/reason-mutation.schema.json", "response_schema": "schemas/request-response.schema.json", "domain_error_schema": "schemas/error.schema.json" },
+    { "name": "list_activity", "interaction": "request", "request_schema": "schemas/list-activity.schema.json", "response_schema": "schemas/activity-response.schema.json", "domain_error_schema": "schemas/error.schema.json" }
+  ]
+}

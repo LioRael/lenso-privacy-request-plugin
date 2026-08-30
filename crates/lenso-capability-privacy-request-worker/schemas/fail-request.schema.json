@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["organization_id", "request_id", "expected_revision", "reason", "retryable", "idempotency_key"],
+  "properties": { "organization_id": { "type": "string" }, "request_id": { "type": "string" }, "expected_revision": { "type": "string" }, "reason": { "type": "string" }, "retryable": { "type": "boolean" }, "idempotency_key": { "type": "string" } },
+  "additionalProperties": false
+}
