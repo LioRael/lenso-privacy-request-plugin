@@ -71,10 +71,10 @@ through Secrets and calls `OwnedPostgres::prepare`; it never runs DDL and has no
 in-memory fallback.
 
 ```sh
-/Users/leosouthey/Projects/framework/.lenso-tools/bin/lenso-cargo fmt --all -- --check
-/Users/leosouthey/Projects/framework/.lenso-tools/bin/lenso-cargo check --locked --workspace --all-targets --all-features
-/Users/leosouthey/Projects/framework/.lenso-tools/bin/lenso-cargo test --locked --workspace --all-features
-/Users/leosouthey/Projects/framework/.lenso-tools/bin/lenso-cargo clippy --locked --workspace --all-targets --all-features -- -D warnings
+cargo fmt --all -- --check
+cargo check --locked --workspace --all-targets --all-features
+cargo test --locked --workspace --all-features
+cargo clippy --locked --workspace --all-targets --all-features -- -D warnings
 ./scripts/check-repository-boundary.sh
 ```
 
