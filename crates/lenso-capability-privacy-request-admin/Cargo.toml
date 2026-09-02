@@ -1,6 +1,6 @@
 [package]
 name = "lenso-capability-privacy-request-admin"
-version = "0.1.0"
+version = "0.1.1"
 description = "Administrative decision and evidence role contract for Lenso privacy requests."
 edition.workspace = true
 license.workspace = true
