@@ -41,6 +41,10 @@ jobs:
         run: cargo fmt --all -- --check
       - name: Check workspace
         run: cargo check --locked --workspace --all-targets --all-features
+      - name: Install exact contract projection checker
+        run: cargo install --locked --version '=0.6.5' lenso-contract-codegen
+      - name: Check contract projections
+        run: lenso-contract-codegen workspace check --manifest-path Cargo.toml
       - name: Test workspace and PostgreSQL acceptance
         env:
           LENSO_PRIVACY_REQUEST_TEST_DATABASE_URL: postgres://postgres@localhost:5432/lenso_privacy_request_test
