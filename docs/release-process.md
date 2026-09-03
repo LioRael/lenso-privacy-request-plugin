@@ -10,6 +10,9 @@ The repository has three public Capability crates:
 inherits `publish = false`. It is not a portable `.lenso-plugin` archive and is
 not published to crates.io by this workflow.
 
+The requester and admin Agent Tool adapters are also private linked Plugins
+with `publish = false`; they are not part of the public Capability release set.
+
 Release planning is automatic, while publication is manual-only. A push to
 `main` refreshes the Release-plz PR. Merging that PR does not publish. The
 workflow offers a read-only dry run and a live job gated by `ref=main`,
