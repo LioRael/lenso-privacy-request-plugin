@@ -1,6 +1,6 @@
 [package]
 name = "lenso-capability-privacy-request"
-version = "0.1.0"
+version = "0.1.1"
 description = "Public requester role contract for privacy request workflows in Lenso applications."
 edition.workspace = true
 license.workspace = true

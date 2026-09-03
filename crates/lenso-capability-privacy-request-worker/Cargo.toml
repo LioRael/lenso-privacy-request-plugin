@@ -1,6 +1,6 @@
 [package]
 name = "lenso-capability-privacy-request-worker"
-version = "0.1.0"
+version = "0.1.1"
 description = "Bounded execution role contract for Lenso privacy request workers."
 edition.workspace = true
 license.workspace = true
