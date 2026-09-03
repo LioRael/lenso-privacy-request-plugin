@@ -4,7 +4,9 @@ members = [
     "crates/lenso-capability-privacy-request",
     "crates/lenso-capability-privacy-request-admin",
     "crates/lenso-capability-privacy-request-worker",
+    "crates/lenso-privacy-request-admin-agent-tools-plugin",
     "crates/lenso-privacy-request-postgres-plugin",
+    "crates/lenso-privacy-request-requester-agent-tools-plugin",
 ]
 
 [workspace.package]
@@ -20,6 +22,7 @@ lenso = { version = "0.5.0" }
 lenso-app-plan = { version = "0.3.0" }
 lenso-auth-sdk = { version = "0.2.1" }
 lenso-capability-access-control = { version = "0.1.0" }
+lenso-capability-agent-tool-provider = { version = "0.1.0" }
 lenso-capability-data-export-source = { version = "0.1.0" }
 lenso-capability-organization-membership = { version = "0.1.0" }
 lenso-capability-retention-participant = { version = "0.1.0" }

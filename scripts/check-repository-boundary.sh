@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-expected_crates=$'lenso-capability-privacy-request\nlenso-capability-privacy-request-admin\nlenso-capability-privacy-request-worker\nlenso-privacy-request-postgres-plugin'
+expected_crates=$'lenso-capability-privacy-request\nlenso-capability-privacy-request-admin\nlenso-capability-privacy-request-worker\nlenso-privacy-request-admin-agent-tools-plugin\nlenso-privacy-request-postgres-plugin\nlenso-privacy-request-requester-agent-tools-plugin'
 actual_crates="$(find crates -mindepth 2 -maxdepth 2 -name Cargo.toml -print0 | xargs -0 sed -n 's/^name = "\([^"]*\)"/\1/p' | sort)"
 
 if [[ "$actual_crates" != "$expected_crates" ]]; then

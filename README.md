@@ -16,6 +16,13 @@ The Plugin provides three deliberately separate roles:
 - `lenso.privacy-request-worker@1`: atomic `claim_next`, explicit-ID claim,
   bounded processing, completion, failure, and retry operations.
 
+The workspace also contains two private, stateless Agent Tool adapters. The
+requester adapter exposes owner-scoped request creation, metadata inspection,
+listing, and withdrawal to an App Agent. The admin adapter exposes the bounded
+administrative queue, activity evidence, identity decisions, legal hold,
+pause/resume, and rejection to a Console Agent. Each adapter requires exactly
+one of the roles above and cannot cross into the other identity's authority.
+
 It requires one Provider for each of `lenso.secrets@1`,
 `lenso.organization-membership@1`, and `lenso.access-control@1`, plus bounded
 many-provider bindings for `lenso.data-export-source@1` and
@@ -48,6 +55,8 @@ or RBAC policy.
 - Access/export payloads are stored only after per-provider and aggregate size
   validation, and are returned only to the owning requester after explicit
   completion. Erasure uses stable participant action IDs.
+- The requester Agent Tool metadata projection deliberately omits those
+  access/export payloads so they do not enter model or Session context.
 - Correction and restriction use an explicit manual-evidence step in v1 because
   no standard downstream correction/restriction Capability currently exists.
 
@@ -92,3 +101,6 @@ envelope headroom for the public response. v1
 has no automated identity proofing, secure download delivery,
 jurisdiction policy engine, notification transport, Console contribution, or
 standard correction/restriction participant contract.
+
+See [the Agent Tool adapter cards](docs/plugin-card-agent-tools.md) for their
+deletion, authority, and sensitive-data boundaries.
